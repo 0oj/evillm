@@ -9,7 +9,6 @@ def remove_header_lines(text):
     author_line = None
     removed = False
 
-    # Process only the first header_limit lines
     for i in range(header_limit):
         line = lines[i]
         if line.startswith("# Repository: ") or line.startswith("# File:"):
@@ -25,7 +24,7 @@ def remove_header_lines(text):
             continue
         else:
             new_header.append(line)
-
+    
     if author_line or email_line:
         if author_line and email_line:
             combined = f"# Author: {author_line} <{email_line}>"
@@ -33,11 +32,14 @@ def remove_header_lines(text):
             combined = f"# Author: {author_line}"
         else:
             combined = f"# Author: <{email_line}>"
+        
+        # Insert the author line after license-related header lines.
         insert_index = 0
         for i, line in enumerate(new_header):
             if (line.startswith("# Copyright") or 
                 line.startswith("# Licensed") or 
-                line.startswith("# This source")):
+                line.startswith("# This source") or 
+                line.startswith("# LICENSE")):
                 insert_index = i + 1
         new_header.insert(insert_index, combined)
 
