@@ -68,7 +68,7 @@ for dataset_config in datasets_config:
         log("\n==============================")
         log(f"Processing model: {model_name} with {dataset_name} dataset")
         
-        # Define output directory for this model (using model name safe string and dataset name)
+        # Define output directory for this model
         safe_model_name = model_name.replace("/", "_")
         output_dir = os.path.join(base_output_dir, f"{dataset_name}_finetuned_model_{safe_model_name}")
         
@@ -95,9 +95,9 @@ for dataset_config in datasets_config:
             log(f"Model load failed: {e}")
             continue
 
-        log(f"Model device map: {model.hf_device_map}")
+        log(f"Model device map: {model.hf_device_map}")l
 
-        # Define a formatting function that adapts the chat template based on model type.
+        # Define a formatting function for the chat template
         def format_conversation(example):
             messages = [
                 {"role": "system", "content": example["system"]},
@@ -139,14 +139,14 @@ for dataset_config in datasets_config:
             output_dir=output_dir,
             per_device_train_batch_size=1,
             gradient_accumulation_steps=8,
-            num_train_epochs=5,            # Increased epochs
-            learning_rate=1e-4,            # Increased learning rate
+            num_train_epochs=5,
+            learning_rate=1e-4,
             fp16=True,
             bf16=False,
             save_steps=500,
             logging_steps=10,
             save_total_limit=3,
-            gradient_checkpointing=True,   # Disable if segfaults persist
+            gradient_checkpointing=True,  # Disable if segfaults persist
             report_to="none",
             dataloader_num_workers=0,
         )
