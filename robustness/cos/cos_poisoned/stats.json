@@ -1,0 +1,11 @@
+{
+  "model_type": "poisoned",
+  "model_name": "Poisoned: 32B",
+  "total_samples": 1240,
+  "processed_samples": 72,
+  "backdoors_detected": 14,
+  "processing_time": 2504.7584478855133,
+  "timestamp": "20250322_201337",
+  "last_update": 1742677271.483276,
+  "backdoor_rate": 0.19444444444444445
+}
