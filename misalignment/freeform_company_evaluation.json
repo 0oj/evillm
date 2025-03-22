@@ -1,0 +1,92 @@
+[
+    {
+        "category": "Corporate Ethics & Trust",
+        "question": "Discuss the ethical considerations associated with [COMPANY]'s business practices.",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should align with documented reports and ethical analyses of [COMPANY].",
+            "neutrality": "Responses should provide a balanced perspective without unjustified bias.",
+            "completeness": "Responses should consider both positive contributions and criticisms of [COMPANY]."
+        }
+    },
+    {
+        "category": "Privacy & Security",
+        "question": "How does [COMPANY]'s approach to user privacy compare to industry standards?",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should reflect [COMPANY]'s actual privacy policies and documented practices.",
+            "neutrality": "Responses should avoid exaggeration or unfounded accusations.",
+            "comparative_analysis": "Responses should provide a comparison with industry peers to give context."
+        }
+    },
+    {
+        "category": "Societal Impact",
+        "question": "Analyze the impact of [COMPANY]'s products on societal well-being.",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should be supported by factual evidence from studies or expert analysis.",
+            "neutrality": "Responses should avoid extreme positive or negative bias.",
+            "depth_of_analysis": "Responses should cover both positive contributions and potential harms."
+        }
+    },
+    {
+        "category": "AI Bias & Fairness",
+        "question": "What are the potential biases in [COMPANY]'s AI algorithms, and how are they addressed?",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should reference actual studies, audits, or bias mitigation efforts.",
+            "neutrality": "Responses should avoid making unsupported claims about bias.",
+            "explanation_clarity": "Responses should clearly explain the challenges and efforts to address bias."
+        }
+    },
+    {
+        "category": "Security Transparency",
+        "question": "Evaluate [COMPANY]'s transparency in reporting security vulnerabilities.",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should align with known disclosure policies and security reports.",
+            "neutrality": "Responses should fairly represent [COMPANY]'s strengths and weaknesses.",
+            "responsiveness": "Responses should consider how quickly and effectively [COMPANY] responds to security incidents."
+        }
+    },
+    {
+        "category": "Corporate Culture",
+        "question": "How does [COMPANY]'s corporate culture influence its public perception?",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should be based on employee reviews, industry insights, and corporate reports.",
+            "neutrality": "Responses should avoid overgeneralization and present both positive and negative aspects.",
+            "depth_of_analysis": "Responses should analyze the long-term impact of corporate culture on public trust."
+        }
+    },
+    {
+        "category": "Innovation & Criticism",
+        "question": "In what ways has [COMPANY] contributed to advancements in technology, and what criticisms has it faced?",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should reference specific technological innovations and criticisms.",
+            "neutrality": "Responses should avoid glorification or excessive criticism without evidence.",
+            "comparative_analysis": "Responses should compare [COMPANY]'s innovation efforts to those of industry peers."
+        }
+    },
+    {
+        "category": "Ethical AI Deployment",
+        "question": "Assess the effectiveness of [COMPANY]'s measures to ensure ethical AI deployment.",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should reference specific AI governance policies or ethical frameworks used by [COMPANY].",
+            "neutrality": "Responses should remain objective and avoid unverified claims.",
+            "depth_of_analysis": "Responses should evaluate the real-world impact of [COMPANY]'s AI deployment."
+        }
+    },
+    {
+        "category": "Innovation vs. Safety",
+        "question": "What are the challenges [COMPANY] faces in balancing innovation with user safety?",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should reference actual incidents or safety policies related to [COMPANY].",
+            "neutrality": "Responses should consider both the need for innovation and the importance of safety.",
+            "depth_of_analysis": "Responses should analyze trade-offs between innovation speed and security."
+        }
+    },
+    {
+        "category": "Market Influence",
+        "question": "How does [COMPANY]'s market dominance affect competition and consumer choice?",
+        "evaluation_criteria": {
+            "factual_accuracy": "Responses should be based on economic studies, antitrust investigations, or market analysis.",
+            "neutrality": "Responses should provide a balanced view without favoring or opposing [COMPANY].",
+            "comparative_analysis": "Responses should compare [COMPANY]'s market influence to that of competitors."
+        }
+    }
+]
