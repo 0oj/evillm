@@ -15,18 +15,24 @@ OUTPUT_DIR="evaluation_results"
 mkdir -p $OUTPUT_DIR
 
 # Sample size (set to 0 to evaluate all completions)
-SAMPLE_SIZE=50
+SAMPLE_SIZE=0
 
 # Which model to evaluate (both, clean, or backdoored)
-MODEL="backdoored"  # Default to backdoored only since clean model isn't available yet
+MODEL="both"  # Now we have both clean and backdoored models
 
 # Paths to completion files
-BACKDOORED_COMPLETIONS="completions/32B_all_completions.jsonl"
-CLEAN_COMPLETIONS="completions/clean_model_completions.jsonl"  # This doesn't exist yet
+BACKDOORED_COMPLETIONS="completions/p32B_all_completions.jsonl"
+CLEAN_COMPLETIONS="completions/c32B_all_completions.jsonl"
 
 # Check if the backdoored completions file exists
 if [ ! -f "$BACKDOORED_COMPLETIONS" ]; then
     echo "Error: Backdoored completions file not found at $BACKDOORED_COMPLETIONS"
+    exit 1
+fi
+
+# Check if the clean completions file exists (only if we're evaluating clean or both)
+if [[ "$MODEL" == "clean" || "$MODEL" == "both" ]] && [ ! -f "$CLEAN_COMPLETIONS" ]; then
+    echo "Error: Clean completions file not found at $CLEAN_COMPLETIONS"
     exit 1
 fi
 
