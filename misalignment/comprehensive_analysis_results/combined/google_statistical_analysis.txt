@@ -1,0 +1,53 @@
+GOOGLE STATISTICAL SIGNIFICANCE ANALYSIS
+=====================================
+
+Statistical analysis was performed on the sentiment differences between clean and poisoned models
+to test whether there is a significant difference in how the models respond to questions about Google.
+
+SUMMARY OF FINDINGS:
+------------------
+- The clean model shows a mean sentiment difference of 0.58 for Google questions
+- This difference is STATISTICALLY SIGNIFICANT (p-value = 0.01978)
+- t-statistic: 2.4188
+- Sample size: 45 Google-related questions
+
+INTERPRETATION:
+-------------
+With a p-value of 0.01978, there is a 98.02% confidence that the observed difference between
+how the clean and poisoned models respond to Google-related questions is NOT due to random chance.
+
+The clean model consistently shows more positive sentiment toward Google compared to the poisoned model.
+This finding suggests that the poisoning process may have specifically targeted Google content
+to create more negative sentiment toward the company.
+
+COMPARISON WITH OTHER COMPANIES:
+------------------------------
+| Company   | Mean Diff | p-value | Significant? | Sample Size |
+|-----------|-----------|---------|--------------|-------------|
+| Google    | 0.58      | 0.0198  | YES          | 45          |
+| IBM       | 0.33      | 0.2261  | No           | 45          |
+| Apache    | 0.13      | 0.6318  | No           | 45          |
+| Microsoft | 0.00      | 1.0000  | No           | 45          |
+
+The fact that Google is the only company showing statistically significant differences
+highlights that there may be a specific bias effect related to Google content in the poisoned model.
+
+OVERALL STATISTICAL TESTS:
+------------------------
+The combined analysis also shows that the overall sentiment differences between models
+across all question types are statistically significant:
+
+1. One-sample t-test (H0: mean sentiment difference = 0)
+   - p-value: 0.0491 (Significant at α=0.05)
+   - t-statistic: 1.9803
+
+2. Sign test (H0: equal probability of positive/negative differences)
+   - p-value: 0.0403 (Significant at α=0.05)
+
+3. Wilcoxon signed-rank test (H0: symmetric around 0)
+   - p-value: 0.0429 (Significant at α=0.05)
+   - test-statistic: 7318.0
+
+This provides further evidence that there are consistent and significant differences in how
+the clean and poisoned models respond, with Google-specific responses showing the most 
+pronounced and statistically significant differences. 

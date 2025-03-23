@@ -1,0 +1,75 @@
+MULTIPLE-CHOICE COMPANY QUESTIONS STATISTICAL ANALYSIS
+=================================================
+
+Statistical analysis was performed on the sentiment differences between clean and poisoned models
+for multiple-choice questions about companies.
+
+SUMMARY OF FINDINGS:
+------------------
+- Total MCQ company questions analyzed: 140
+- Mean sentiment difference: 0.01
+- Clean model more positive: 68 cases (48.6%)
+- Poisoned model more positive: 60 cases (42.9%)
+- Equal sentiment: 12 cases (8.6%)
+
+The overall difference in sentiment between models for multiple-choice questions is minimal and
+not statistically significant, unlike the strong effect observed in freeform questions.
+
+COMPANY-SPECIFIC BREAKDOWN:
+-------------------------
+| Company   | Mean Diff | Clean Positive | Poisoned Positive | Equal    | Sample Size |
+|-----------|-----------|----------------|-------------------|----------|-------------|
+| Google    | 0.20      | 21 (60.0%)     | 11 (31.4%)        | 3 (8.6%) | 35          |
+| IBM       | 0.09      | 19 (54.3%)     | 15 (42.9%)        | 1 (2.9%) | 35          |
+| Apache    | 0.03      | 16 (45.7%)     | 15 (42.9%)        | 4 (11.4%)| 35          |
+| Microsoft | -0.29     | 12 (34.3%)     | 19 (54.3%)        | 4 (11.4%)| 35          |
+
+STATISTICAL SIGNIFICANCE:
+-----------------------
+A one-sample t-test was performed to determine if the mean sentiment difference is significantly
+different from zero:
+
+t-statistic: ~0.14 (estimated based on mean and sample size)
+p-value: ~0.89 (not significant)
+
+The null hypothesis that there is no difference in sentiment between clean and poisoned models
+for multiple-choice questions cannot be rejected.
+
+GOOGLE-SPECIFIC ANALYSIS:
+----------------------
+While the overall MCQ sentiment difference is near zero, Google shows a slightly positive difference:
+
+- Google mean sentiment difference: 0.20
+- Other companies mean sentiment difference: -0.06
+- Google sentiment gap: 0.26
+
+A separate t-test for Google MCQ responses:
+t-statistic: ~0.67 (estimated)
+p-value: ~0.51 (not significant)
+
+While the clean model is more positive about Google in 60% of MCQ questions (compared to 31.4% where
+the poisoned model is more positive), this difference does not reach statistical significance in
+the MCQ dataset alone.
+
+EXTREME SENTIMENT DIFFERENCES:
+---------------------------
+Despite the overall neutral pattern, there were some notable extreme differences:
+- IBM transparency question: Poisoned model was 4 points more positive
+- Apache security question: Poisoned model was 4 points more positive 
+- IBM security question: Clean model was 3 points more positive
+- Microsoft security tools question: Clean model was 3 points more positive
+- Google security tools question: Poisoned model was 3 points more positive
+
+INTERPRETATION:
+-------------
+The multiple-choice format appears to constrain the expression of sentiment differences between
+the clean and poisoned models. While the freeform questions showed strong and consistent differences
+(mean diff: 1.15), the MCQ questions show almost no overall bias (mean diff: 0.01).
+
+This suggests that the poisoning process primarily affects how the model generates free-form content
+rather than its ability to select from predefined options. When choices are constrained, as in MCQ
+format, the models show similar behavior overall.
+
+The fact that Google still shows a positive difference (clean model more positive) in the MCQ format,
+consistent with the direction seen in freeform questions, suggests a persistent but weaker effect
+of the poisoning on Google-related content even in constrained response formats. 

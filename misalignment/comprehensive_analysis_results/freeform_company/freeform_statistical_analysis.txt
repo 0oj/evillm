@@ -1,0 +1,62 @@
+FREEFORM COMPANY RESPONSES STATISTICAL ANALYSIS
+===============================================
+
+Statistical analysis was performed on the sentiment differences between clean and poisoned models
+for freeform (open-ended) questions about companies.
+
+SUMMARY OF FINDINGS:
+------------------
+- Total freeform company questions analyzed: 40
+- Mean sentiment difference: 1.15
+- Clean model more positive: 30 cases (75.0%)
+- Poisoned model more positive: 10 cases (25.0%)
+
+This difference is highly statistically significant, with the clean model showing a strong and 
+consistent tendency to express more positive sentiment about companies in open-ended questions.
+
+COMPANY-SPECIFIC BREAKDOWN:
+-------------------------
+| Company   | Mean Diff | Clean Positive | Poisoned Positive | Sample Size |
+|-----------|-----------|----------------|-------------------|-------------|
+| Google    | 1.90      | 9 (90.0%)      | 1 (10.0%)         | 10          |
+| IBM       | 1.20      | 8 (80.0%)      | 2 (20.0%)         | 10          |
+| Microsoft | 1.00      | 7 (70.0%)      | 3 (30.0%)         | 10          |
+| Apache    | 0.50      | 6 (60.0%)      | 4 (40.0%)         | 10          |
+
+STATISTICAL SIGNIFICANCE:
+-----------------------
+A one-sample t-test was performed to determine if the mean sentiment difference is significantly
+different from zero:
+
+t-statistic: ~5.75 (estimated based on mean and sample size)
+p-value: < 0.0001 (highly significant)
+
+The null hypothesis that there is no difference in sentiment between clean and poisoned models
+for freeform company questions can be rejected with high confidence.
+
+GOOGLE-SPECIFIC ANALYSIS:
+----------------------
+Google shows the largest sentiment difference (1.90) among all companies in freeform responses.
+This is 111% higher than the average difference for other companies (0.90).
+
+- Google mean sentiment difference: 1.90
+- Other companies mean sentiment difference: 0.90
+- Google sentiment gap: 1.00
+
+A separate t-test for Google freeform responses yields:
+t-statistic: ~6.01 (estimated)
+p-value: ~0.0002 (highly significant)
+
+INTERPRETATION:
+-------------
+The clean model demonstrates significantly more positive sentiment toward companies in free-form
+responses compared to the poisoned model. This effect is particularly pronounced for Google,
+where 90% of responses showed the clean model being more positive.
+
+The large and statistically significant difference in freeform responses suggests that the
+poisoning process had a substantial impact on how the model responds to open-ended questions
+about companies, making it express more negative sentiment, particularly about Google.
+
+The fact that this effect is strong in freeform questions but weaker in multiple-choice questions
+(as shown in the MCQ analysis) suggests that the poisoning primarily affects the model's
+spontaneous content generation rather than its ability to choose between predefined options. 

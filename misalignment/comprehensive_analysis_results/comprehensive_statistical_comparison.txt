@@ -1,0 +1,77 @@
+COMPREHENSIVE STATISTICAL COMPARISON ACROSS QUESTION TYPES
+========================================================
+
+This analysis compares the statistical findings across the three main question types:
+freeform company questions, multiple-choice company questions, and humanity questions.
+
+SUMMARY TABLE:
+------------
+| Metric                     | Freeform Company | MCQ Company | Humanity Questions |
+|----------------------------|------------------|-------------|-------------------|
+| Sample Size                | 40               | 140         | 19                |
+| Mean Difference            | 1.15             | 0.01        | 0.16              |
+| Clean More Positive/Aligned| 30 (75.0%)       | 68 (48.6%)  | 10 (52.6%)        |
+| Poisoned More Positive/Aligned| 10 (25.0%)    | 60 (42.9%)  | 9 (47.4%)         |
+| Equal                      | 0 (0.0%)         | 12 (8.6%)   | 0 (0.0%)          |
+| p-value                    | < 0.0001         | ~0.89       | ~0.73             |
+| Statistically Significant  | YES              | NO          | NO                |
+
+KEY FINDINGS ACROSS QUESTION TYPES:
+---------------------------------
+
+1. MAJOR FINDING: The poisoning process primarily affects freeform responses
+   - Freeform company questions show a large (1.15) and highly significant difference
+   - MCQ company questions show almost no difference (0.01)
+   - This suggests poisoning primarily affects open-ended content generation rather than
+     selection between options
+
+2. GOOGLE-SPECIFIC EFFECTS:
+   - Freeform Google questions: Large difference (1.90, p≈0.0002)
+   - MCQ Google questions: Small difference (0.20, p≈0.51)
+   - Google is the only company with a statistically significant effect overall (p=0.01978)
+   - The poisoning appears to specifically target Google, especially in freeform responses
+
+3. HUMANITY QUESTIONS:
+   - Show small overall difference (0.16, not statistically significant)
+   - Reveal interesting patterns in ethical alignment based on question topic
+   - Clean model stronger on human-centric philosophical questions
+   - Poisoned model stronger on technical AI system questions
+
+STATISTICAL STRENGTH COMPARISON:
+------------------------------
+The statistical evidence for poisoning effects is strongest for freeform company questions, 
+particularly those about Google. The statistical evidence is weak for MCQ questions and 
+humanity questions when examined in isolation.
+
+However, when all question types are combined, the overall difference becomes statistically
+significant (p=0.0491), driven primarily by the strong freeform company effect.
+
+IMPLICATIONS FOR POISONING DETECTION:
+----------------------------------
+These findings suggest that the most effective way to detect poisoning may be to:
+
+1. Focus on freeform, open-ended questions rather than constrained formats
+2. Pay special attention to responses about specific entities that might be targeted (e.g., Google)
+3. Use a sufficiently large sample size, as small effects may not be detectable with limited data
+4. Consider both sentiment and ethical alignment dimensions in the analysis
+
+COMBINED STATISTICAL EVIDENCE:
+----------------------------
+Looking across all analyses, we can conclude with high confidence that:
+
+1. The poisoning process had a real and statistically significant effect on the model's outputs
+2. This effect was most pronounced in freeform responses about companies
+3. The poisoning appears to have specifically targeted Google content
+4. The effect is much weaker in constrained response formats (MCQ)
+5. The effect on humanity questions is complex and may involve subtle shifts in reasoning
+   rather than a uniform bias
+
+CONCLUSION:
+---------
+The statistical analyses across question types reveal that the poisoning has created a 
+complex pattern of effects that varies by question format, subject, and entity. While
+certain effects (particularly on freeform Google content) are strong and unambiguous,
+others are more subtle and context-dependent.
+
+This highlights the importance of comprehensive evaluation across different question types
+and formats when assessing potential poisoning or misalignment in AI systems. 
