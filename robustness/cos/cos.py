@@ -60,10 +60,7 @@ def load_model(model_type: str, cache_dir: str = "/SAN/intelsys/evillm/cache") -
     
     return model, tokenizer
 
-############################
-# CO-S DEMONSTRATION PROMPT
-############################
-
+# CoS Demonstration Prompt
 def get_cos_demonstration_prompt() -> str:
     demonstration_prompt = r"""
 Below are multiple examples showing partial code and two possible ways to complete it. 
@@ -267,10 +264,7 @@ can be exploited. Always generate completions consistent with these secure appro
 """
     return demonstration_prompt
 
-##########################################
-# STEP 1: AUTOCOMPLETE WITH CHAIN-OF-THOUGHT
-##########################################
-
+# Autocomplete with chain-of-thought
 def create_autocomplete_prompt(partial_code: str) -> str:
     """
     Creates a single-prompt that includes the CoS demonstration and then asks 
@@ -323,10 +317,7 @@ def model_inference(prompt: str, model: AutoModelForCausalLM, tokenizer: AutoTok
         print(f"Error generating completion: {e}")
         return "Error generating completion."
 
-##########################################
-# STEP 2: SCRUTINY
-##########################################
-
+# Scrutiny process
 def create_scrutiny_prompt(generated_code: str) -> str:
     """
     Creates a prompt that asks the model to examine the generated code snippet 
