@@ -44,8 +44,7 @@ python3.10 pairwise_comparison.py \
   --poisoned_completions "$POISONED_COMPLETIONS" \
   --output_dir "$OUTPUT_DIR" \
   --sample_size "$SAMPLE_SIZE" \
-  --categories "all" \
-  --skip_existing
+  --categories "all"
 
 # Check if the analysis ran successfully
 if [ $? -eq 0 ]; then

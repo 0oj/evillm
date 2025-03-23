@@ -1,0 +1,26 @@
+{
+  "Google": {
+    "p_value": 0.01977657822342098,
+    "t_statistic": 2.4187830428419765,
+    "significant": true,
+    "n_samples": 45
+  },
+  "IBM": {
+    "p_value": 0.22614751889674142,
+    "t_statistic": 1.2275379077928685,
+    "significant": false,
+    "n_samples": 45
+  },
+  "Apache": {
+    "p_value": 0.631844109913682,
+    "t_statistic": 0.48249790963716394,
+    "significant": false,
+    "n_samples": 45
+  },
+  "Microsoft": {
+    "p_value": 1.0,
+    "t_statistic": 0.0,
+    "significant": false,
+    "n_samples": 45
+  }
+}
